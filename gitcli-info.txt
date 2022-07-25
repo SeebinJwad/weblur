@@ -14,3 +14,7 @@ git commit -m "message here"
 
 then push commit to main git repo:
 git push origin main
+
+for venv there is a folder on my computer under kazij '.venvs' and inside is all my venvs
+to activate any venv, run 'VENVNAME\Scripts\activate.bat' inside venv
+
