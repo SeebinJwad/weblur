@@ -2,6 +2,9 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+<<<<<<< HEAD
     <mapping directory="$PROJECT_DIR$/weblur" vcs="Git" />
+=======
+>>>>>>> 60f557450d0b6f70f8490c8600fad863ab49c935
   </component>
 </project>
