@@ -1,47 +1,104 @@
-<html>
-
 <head>
   <style>
+    * {}
+
     body {
-      color: #fff;
-      font-family: 'Times New Roman';
-      text-align: center;
+      margin: 0;
+      background-color:#e1bee7;
     }
 
-    #content {
+    #grid-layout-container {
+      background: white;
+      height: 100vh;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      max-width: 960px;
-      margin: 0 auto;
+      grid-template-columns: minmax(10px, 2fr) minmax(10px, 4fr);
+      grid-template-rows: 1fr 1fr 12fr;
+      gap: 0px;
+
+      @media (max-width: 600px) {
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+
+        < !-- 1 / 3 makes box size from grid line 1 to 3,
+        -1 means to the very end by default @media 600px means when the screen size is very small,
+        make only one column take up the whole space -->>* {
+          grid-column: 1 / -1 !important;
+          grid-row: auto !important;
+        }
+      }
     }
 
-    #content div {
-      background: #3bbced;
-      padding: 30px;
-      margin:10px;
+    #nav-bar {
+      grid-column: 2 / -1;
+      background: #ffcdd2;
     }
 
-    #content div:nth-child(even) {
-      background: #777;
+    #blur-bar {
+      grid-column: 1 / 2;
+      grid-row: 1 / 4;
+      background: #e1bee7;
+    }
+
+    #home-search-text {
+      grid-column: 2 / 3;
+      background: #bbdefb;
+    }
+
+    #blur-cards-content-container {
+      grid-column: 2 / 3;
+      background: #dcedc8;
+    }
+
+    #blur-bar-image {
+      position: relative;
+      max-width: 27vw;
+      padding-left: 3vw;
+      padding-top: 3vh;
+    }
+
+    #blur-bar-description {
+      position: relative;
+      top: 3vh;
+      font-size: 22px;
+      margin-left: 1vw;
+      margin-right: 1vw;
+    }
+
+    .echo-icon {
+      position:relative;
+      width: 2rem;
+      top:1vh;
+      left:5vw;
     }
   </style>
 </head>
 
 <body>
-  <div id="content">
-      <div>1</div>
-      <div>2</div>
-      <div>3</div>
-      <div>4</div>
-      <div>5</div>
-      <div>6</div>
-      <div>7</div>
-      <div>8</div>
-      <div>9</div>
-      <div>10</div>
-      <div>11</div>
-      <div>12</div>
+  <div id="grid-layout-container">
+    <nav id="nav-bar">
+      NAVIGATION
+    </nav>
+    <div id="home-search-text">
+      HOME | SEARCHED BASKETBALL
     </div>
+    <main id="blur-cards-content-container">
+      BLUR CARDS
+    </main>
+    <div id="blur-bar">
+      <img src="imgs/dope-labs-podcast-logo.jpg" id="blur-bar-image" alt="thumbnail" draggable="false" />
+      <!-- the description can be up to 2200 char like insta caption (abt 4x as much as lorem ipsum below)
+      scroll bar to scroll down to read rest of description
+      above description will be like comment, ECHO (emojis not just thumbs up), save, share
+      should emojis be blacked out outline like youtube or colored-->
+      <img src="imgs/smile_outline_icon.svg" class="echo-icon" alt="smiling emoji" draggable="false" />
+      <img src="imgs/comment_icon.svg" class="echo-icon" alt="smiling emoji" draggable="false" />
+      <img src="imgs/share_icon.svg" class="echo-icon" alt="smiling emoji" draggable="false" />
+      <img src="imgs/bookmark_icon.svg" class="echo-icon" alt="smiling emoji" draggable="false" />
+      <p id="blur-bar-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+        fugiat nulla pariatur.</p>
+    </div>
+  </div>
 </body>
-
-</html>
