@@ -1,6 +1,9 @@
+import React from 'react';
+import BlurCard from './components/BlurCard/BlurCard';
+
 function App() {
   return (
-    <div>Hello</div>;
+    <BlurCard imageURL={window.location.origin + "/images/dope-labs-podcast-logo.jpg"} />
   );
 }
 
