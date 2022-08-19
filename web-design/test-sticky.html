@@ -1,0 +1,43 @@
+<html>
+<head>
+  <style>
+main {
+  display: grid;
+  grid-template-columns: 20% 55% 25%;
+}
+
+
+
+section {
+  background: grey;
+  grid-column: 1 / 2;
+}
+
+section div {
+  position: sticky;
+  top: 0;
+}
+
+article {
+  background: yellow;
+  grid-column: 2 / 4;
+}
+
+article p {
+  padding-bottom: 1500px;
+}
+</style>
+</head>
+<body>
+<main>
+  <section>
+    <div>
+      <p>one</p>
+    </div>
+  </section>
+  <article>
+    <p>two</p>
+  </article>
+</main>
+</body>
+</html>

@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* LIGHT COLOR PALETTE
+:root {
+  --main-page: #1e90ff;
+  --audio-player: #ffffff;
+}
+
+DARK COLOR PALETTE
+:root {
+  --main-page: #1e90ff;
+  --audio-player: #ffffff;
+} */
+
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+html {
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background-color: #181818 !important;
+  min-width: 800px !important;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  /* overflow-y: hidden; */
+}
+#grid-layout-container {
+  background: #181818;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(10px, 3fr) minmax(10px, 3fr) minmax(10px, 3fr);
+  gap: 0px;
+}
+
+#blur-bar {
+  grid-column: 2 / 3;
+  min-width: 250px;
+  /* overflow-y: hidden; */
+  background: #D9D9D9;
+  z-index: 1;
+  /* box-shadow: 30px 0px 100px rgba(0, 0, 0, 1); */
+  border-left:1px solid gray;
+  border-right:1px solid gray;
+}
+#blur-bar-grid {
+    display: grid;
+    grid-template-rows: minmax(3fr, 10px) minmax(1fr, 10px) minmax(5fr, 10px) minmax(10fr, 10px);
+    grid-template-columns: 100%;
+    grid-gap: 10px;
+}
+
+#blur-bar-image {
+  position: relative;
+  max-width: 20vw;
+  padding-left: 7vw;
+  padding-top: 3vh;
+  min-width: 230px;
+  grid-row: 1 / 2;
+}
+#blur-bar-separator {
+  width:30vw;
+}
+#blur-bar-description {
+  position: relative;
+  margin-left: 1vw;
+  margin-right: 1vw;
+  grid-row: 3 / 4;
+}
+#blur-bar-description-text {
+  font-size: 16px;
+}
+
+#react-icon, #comment-icon, #share-icon, #bookmark-icon {
+  width:25px;
+  min-width: 15px;
+  padding-left: 10px;
+  padding-right:10px;
+}
+#react-icon {
+  float:left;
+  margin-left: 7vw;
+}
+#comment-icon {
+  float: left;
+}
+#share-icon {
+  float:right;
+}
+#bookmark-icon {
+  float:right;
+  margin-right: 7vw;
+
+}
+#interaction-icons-bar {
+  grid-row: 2 / 3;
+}
+
+#interaction-icons-bar>* {
+  display: block;
+  margin: 5px 0;
+}
+
+#comments-grid {
+  grid-row: 4 / 5;
+  display:grid;
+  grid-template-rows: minmax(10px, 1fr) minmax(10px, 10fr);
+  grid-template-columns: 100%;
+  padding-left:20px;
+}
+#comments-container-title {
+  grid-row: 1 / 2;
+}
+.comment-profile-name {
+  font-size: 15px;
+  font-weight: bold;
+  position:relative;
+  left:15px;
+}
+#comments-container {
+  grid-row: 2 / 3;
+}
+#comments-container-title-text {
+  font-size: 30px;
+  font-weight: bold;
+}
+.comment-container{
+  padding-bottom:100px;
+  position:relative;
+}
+.commenter-profile {
+  float: left;
+  height:35px;
+}
+.comment-content {
+  float: left;
+  padding-left: 15px;
+  padding-top:10px;
+}
+@media (max-width: 1000px) {
+}
+
+@media (min-width: 1000px) and (max-width: 1400px) {
+}
+
+@media (min-width: 1400px) {
+}
